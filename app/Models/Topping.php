@@ -12,4 +12,6 @@ class Topping extends Model
 
     protected $table = "ysatynska_training.dbo.toppings_ys";
     protected $primaryKey = "id";
+    protected $guarded = [];
+    protected $dates = ['deleted_at'];
 }

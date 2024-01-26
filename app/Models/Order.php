@@ -28,5 +28,7 @@ class Order extends Model
     public function condiment_maps() {
         return $this->hasMany(CondimentMap::class, 'fkey_order', 'id');
     }
-    protected $guarded = [];
+    // protected $guarded = [];
+    protected $fillable = ['name', 'entree', 'cheese', 'fries', 'fkey_entree', 'fkey_cheese', 'fries', 'created_by', 'updated_by'];
+    protected $dates = ['deleted_at'];
 }

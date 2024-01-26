@@ -20,16 +20,24 @@ class ForceSecretAgent
     {
         $returnRoute = Redirect::to('login')->with('returnURL', $request->fullUrl());
 
-        if (RCAuth::check() || RCAuth::attempt()) {
-            $rcid = RCAuth::user()->rcid;
+        if (self::isAdmin()) {
+            // $rcid = RCAuth::user()->rcid;
 
-            // $user = User::where('RCID', $rcid)->first();
+            // // $user = User::where('RCID', $rcid)->first();
 
-            if ($rcid='1285521') {
+            // if ($rcid==='1285521') {
                 $returnRoute = $next($request);
-            }
+            // }
         }
 
         return $returnRoute;
+    }
+
+    public static function isAdmin (){
+
+        if (RCAuth::check() || RCAuth::attempt()){
+            return (RCAuth::user()->rcid ==='1285521');
+        }
+        return false;
     }
 }
