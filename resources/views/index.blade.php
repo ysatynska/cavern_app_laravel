@@ -81,7 +81,7 @@
                     <td> 5 pm to 11 pm </td>
                   </tr>
                   <tr>
-                    <td class = "sat" colspan="2">Closed Saturday <button id="imp" onclick = "location.href = '{{asset('secret_base')}}'" name="view_menu" value="View Menu"> </button></td>
+                    <td class = "sat" colspan="2">Closed Saturday </td>
                   </tr>
                 </tbody>
               </table>
@@ -92,7 +92,13 @@
           </div>
         </div>
       </div>
-  </div>
+
+      @if($secret_agent)
+        <button class="btn-warning btn-lg" onclick = "location.href = '{{asset('secret_base')}}'" name="view_menu" value="View Menu">Secret Page </button>
+        <button class="btn-warning btn-lg" onclick = "location.href = '{{asset('all_orders')}}'" name="view_menu" value="View Menu">All Orders </button>
+        <button class="btn-warning btn-lg" onclick = "location.href = '{{asset('toppings')}}'" name="toppings" value="Toppings">Toppings </button>
+      @endif
+    </div>
   </body>
 </html>
 @endsection

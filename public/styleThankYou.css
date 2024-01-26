@@ -34,3 +34,7 @@ table {
 img {
     width: 50%;;
 }
+
+.grid-2 {
+    grid-gap: 50px !important;
+}

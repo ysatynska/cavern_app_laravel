@@ -1,16 +1,20 @@
 <?php
 namespace App\Http\Controllers;
 
+use App\Http\Middleware\ForceSecretAgent;
 use Illuminate\Http\Request;
 use RCAuth;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\Storage;
 use App\Models\Slide;
+use App\Models\Order;
 
 class CavernController extends Controller
 {
-  public function index(){
-    return view('index');
+  public function index(Request $request){
+    return view('index', [
+        'secret_agent' => \App\Http\Middleware\ForceSecretAgent::isAdmin()
+    ]);
   }
 
   public function __construct(){
@@ -49,4 +53,11 @@ class CavernController extends Controller
     $file = Slide::orderBy('created_at', 'desc')->first();
     return Storage::download($file->filename, 'newest');
   }
+
+  public function allOrders(){
+    $orders = Order::get();
+
+    return view('allOrders', ['orders' => $orders]);
+  }
+
 }

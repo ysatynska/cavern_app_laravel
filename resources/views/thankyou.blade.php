@@ -22,7 +22,11 @@
 
 <body>
     <div id="orderThankYou">
-    <h4> Thank You For Your Order! </h4>
+        @if (request('number'))
+            <h4> Review Order {{request('number')}}</h4>
+        @else
+            <h4> Thank You For Your Order! </h4>
+        @endif
     <table>
       <tbody>
         <tr>

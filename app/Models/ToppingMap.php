@@ -14,7 +14,7 @@ class ToppingMap extends Model
     protected $primaryKey = "id";
 
     public function topping() {
-        return $this->hasOne(Topping::class, 'id', 'fkey_topping');
+        return $this->hasOne(Topping::class, 'id', 'fkey_topping')->withTrashed();
     }
     protected $guarded = [];
 }
