@@ -62,5 +62,6 @@ class Kernel extends HttpKernel
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
         'verified' => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
         'force_login' => \App\Http\Middleware\ForceLogin::class,
+        'force_secret_agent' => \App\Http\Middleware\ForceSecretAgent::class, 
     ];
 }

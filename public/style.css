@@ -1,0 +1,167 @@
+table, tr, td, thead {
+    text-align: left;
+  }
+
+  th, .sat {
+    text-align: center;
+  }
+
+  .grid {
+    padding: 20px;
+  }
+
+  thead tr th {
+    background-color: #f5f8fb;
+  }
+
+  img {
+    width: 100%;
+  }
+
+  table {
+    width: 100%;
+  }
+
+  tr {
+    height: 31px;
+  }
+
+  .text.grid-item {
+    padding: 0 0 1.5em 0;
+  }
+
+  td, thead tr th {
+    padding: 0 .5em 0 .5em !important;
+  }
+
+  table tr:nth-child(odd) {
+      background-color: #f2f2f2;
+  }
+
+  table tr:hover {
+    background-color: #ddd;
+  }
+
+  th, tr {
+    border-bottom: 1px solid #ddd;
+  }
+
+  #link h4 {
+    font-weight: lighter;
+  }
+
+  #hours h4{
+    color: black !important;
+  }
+
+  .grid-2 {
+      row-gap: 0 !important;
+      column-gap: 30px !important;
+  }
+
+  #link a {
+      color: white !important;
+      text-align: center;
+      font-weight: lighter;
+  }
+
+  #media {
+    margin: auto;
+    border: 1.5px solid rgba(0, 0, 0, .4);
+    padding: .5rem;
+  }
+/*
+  .bodyBox {
+    bottom: 2rem;
+    background-color: white;
+  } */
+
+  input[type="button"]{
+    background-color: #B8B2AA;
+    border: none;
+    border-radius: 3px;
+    width: 5.5rem;
+    height: 2rem;
+    color: white;
+  }
+
+  button#imp {
+    background-color: #C7C7C7;
+    color: white !important;
+    border: none !important;
+    padding: .5rem;
+  }
+
+  button#imp:hover {
+    background-color: #71B6CC !important;
+  }
+
+  #buttons {
+    text-align: right;
+  }
+
+  select#dropMenu {
+    background-image: var(--bs-form-select-bg-img),var(--bs-form-select-bg-icon,none) !important;
+  }
+
+  .own {
+    font-size: 16px !important;
+  }
+
+  label {
+    font-weight: bold;
+    padding-bottom: 1rem;
+  }
+
+  .form-check input[type="checkbox"], #type input[type="radio"], #cheese input[type="radio"], #fries input[type="radio"], #name input[type="text"], #entree select{
+    margin:1.4rem 0 0 0 !important;
+  }
+
+  label {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  #fries label.fries{
+    margin-top: 1.4rem !important;
+  }
+
+  #submit {
+    text-align: right;
+  }
+
+  #submit input[value="Submit Order"] {
+    font-weight: bolder !important;
+  }
+
+  .btn {
+      margin: 0 1.5rem 0 0 !important;
+  }
+  #order {
+    text-align: center;
+  }
+  input[type="checkbox"] {
+    background-color: grey;
+  }
+
+  input[type="checkbox"] input[value="yes"] {
+    text-indent: 3rem;
+  }
+
+  @media only screen and (max-width: 1020px) {
+    body {
+      padding: 0;
+    }
+
+    .bodyBox{
+      height: 100%;
+    }
+  }
+
+  .form-control {
+    font-size: 14px !important;
+  }
+
+  .far {
+    font-family: "Font Awesome 6 Pro" !important;
+  }
